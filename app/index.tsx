@@ -10,7 +10,7 @@ const app = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../../assets/images/iced-coffee.png")}
+        source={require("../assets/images/iced-coffee.png")}
         resizeMode="cover"
         style={styles.image}
       >
@@ -18,6 +18,11 @@ const app = () => {
         <Link href="/contact" style={{ marginHorizontal: "auto" }} asChild>
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>Contact</Text>
+          </Pressable>
+        </Link>
+        <Link href="/menu" style={{ marginHorizontal: "auto" }} asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Our Menu</Text>
           </Pressable>
         </Link>
       </ImageBackground>
@@ -56,13 +61,15 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.5)",
     padding: 4,
   },
-  button:{
-    height:45,
-    borderRadius:10,
-    backgroundColor:'rgba(0,0,0,0.75)',
-    padding:6,
-    alignItems:'center',
-    justifyContent:'center',
+  button: {
+    height: 45,
+    borderRadius: 10,
+    marginBottom:50,
+    width:150,
+    backgroundColor: "rgba(0,0,0,0.75)",
+    padding: 6,
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonText: {
     color: "white",
